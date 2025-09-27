@@ -1,0 +1,266 @@
+
+:root {
+  --text-color: #ffffff;        /* Warna teks utama */
+  --link-color: #ffe606;        /* Warna link */
+  --background-color: #000000;  /* Warna background halaman */
+}
+
+
+* {
+  margin: 0;                   /* Hilangin margin default */
+  padding: 0;                  /* Hilangin padding default */
+  box-sizing: border-box;      
+}
+
+
+html {
+  scroll-behavior: smooth;     
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif; /* Font */
+  color: var(--text-color);           
+  background-color: var(--background-color); /* Warna latar */
+  max-width: 1400px;                  /* Lebar halaman */
+  margin: 0 auto;                     
+}
+
+
+a {
+  color: var(--link-color);           /* Warna link */
+  text-decoration: none;              
+}
+
+
+nav {
+  display: flex;                      
+  justify-content: space-between;     
+  align-items: center;                
+  background-color: #940381;          
+  color: #ffffff;                     
+  padding: 0 50px;                    
+  height: 80px;                      
+  position: sticky;                   
+  top: 0;                             
+  z-index: 1000;                     
+}
+
+nav .left a {
+  color: #ffffff;                    /* Warna teks */
+  font-size: 22px;                    /* Ukuran teks */
+  font-weight: 600;                   /* Tebal teks */
+}
+
+nav .center {
+  display: flex;                      /* Menu tengah horizontal */
+  gap: 30px;                          /* Jarak antar menu */
+  margin: 0 auto;                     
+}
+
+nav .center a {
+  color: #ffffff;                     /* Warna teks */
+  font-weight: 500;                   /* Tebal teks */
+  transition: 0.3s;                   /* Animasi hover */
+  padding: 0 100px;                   
+}
+
+
+nav .center a:hover {
+  color: #ffe606;                     /* Warna pas hover */
+}
+
+/*  HERO SECTION */
+.hero-section {
+  display: flex;                      /* Layout teks & foto */
+  align-items: center;                
+  justify-content: space-between;     
+  padding: 50px 80px;                 
+  gap: 80px;                          /* Jarak teks & foto */
+}
+
+.hero-section .text {
+  flex: 1;                            
+  text-align: left;                   
+  max-width: 60%;                     /* Teks max 60% area */
+}
+
+.hero-section .text h2 {
+  font-size: 35px;                    /* Ukuran judul */
+  white-space: nowrap;                
+}
+
+.hero-section .text .links {
+  margin-top: 25px;                   /* Jarak atas link */
+}
+
+.hero-section .text .links a {
+  display: inline-block;              
+  padding: 5px 10px;                  
+  border: 2px solid var(--link-color);/* Border kuning */
+  border-radius: 5px;                 
+  margin-right: 10px;                 
+  margin-bottom: 10px;                
+  transition: .1s;                    /* Animasi hover */
+}
+
+.hero-section .text .links a:hover {
+  color: var(--text-color);           /* Teks putih pas hover */
+  border: 2px solid var(--text-color);/* Border putih pas hover */
+}
+
+.hero-section .headshot {
+  flex: 2;                            /* Lebih besar dari teks */
+  display: flex;
+  justify-content: right;             /* Foto ke kanan */
+}
+
+.hero-section .headshot img {
+  width: 350px;                       /* Lebar foto */
+  height: 350px;                      /* Tinggi foto  */
+  border-radius: 50%;                 /* Foto jadi bulat */
+  object-fit: cover;                  
+}
+
+/* SKILLS */
+.skills-section {
+  padding: 0 50px;                    /* Jarak kiri-kanan */
+  margin-bottom: 100px;               /* Jarak bawah */
+  gap: 100px;                         
+}
+
+.skills-section h2 {
+  text-align: center;                 /* Judul tengah */
+  font-size: 35px;                    /* Ukuran judul */
+}
+
+.skills-section .text {
+  text-align: center;                 /* Teks tengah */
+  margin-bottom: 20px;                /* Jarak bawah */
+}
+
+.skills-section .cells {
+  display: flex;                      /* Flex container */
+  justify-content: center;            
+  flex-wrap: wrap;                    /* Pindah baris */
+}
+
+.skills-section .cells .cell {
+  display: flex;                      
+  justify-content: center;            
+  align-items: center;                
+  gap: 10px;                          
+
+  width: 200px;                       
+  padding: 10px 20px;                 
+  margin: 10px;                       
+  border: 1.5px solid #d3d3d3;        
+  border-radius: 5px;                 
+}
+
+.skills-section .cells .cell img {
+  width: 30px;                        /* Ikon size */
+  height: 30px;
+  object-fit: contain;                
+  border-radius: 2px;                 /* Sudut ikon */
+}
+
+.skills-section .cells .cell span {
+  font-size: 18px;                    
+}
+
+
+.contact-section {
+  text-align: center;                 
+  margin: 60px 0;                     
+}
+
+.contact-section h2 {
+  font-size: 35px;                    
+}
+
+/* contact links */
+.contact-links {
+  display: flex;                      
+  justify-content: center;            
+  gap: 100px;                         
+  margin-top: 20px;                   
+}
+
+.contact-links a {
+  font-size: 20px;                    
+  color: var(--text-color);           
+  text-decoration: none;              
+  transition: color 0.3s;             /* Animasi hover */
+}
+
+.contact-links a:hover {
+  color: var(--link-color);           
+}
+
+.contact-links i {
+  margin-right: 8px;                  /* Jarak ikon teks */
+  font-size: 22px;                    /* Ukuran ikon */
+}
+
+@media (max-width: 850px) {
+  .hero-section .text h2 {
+    font-size: 35px;                  
+  }
+}
+
+@media (max-width: 740px) {
+  .hero-section {
+    flex-direction: column-reverse;   /* Foto & teks*/
+  }
+
+  .hero-section .headshot img {
+    width: 300px;                     
+  }
+
+  .contact-links {
+    flex-direction: column;           
+    align-items: center;              /* Tengah */
+    gap: 20px;                        /* Jarak link */
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    padding: 0 20px;                  
+  }
+
+  nav .right a {
+    font-size: 22px;                  
+  }
+
+  nav .right a:last-child {
+    color: var(--text-color);         /* Warna teks */
+    background-color: transparent;    /* Tanpa background */
+    padding: 0;                       
+  }
+
+  nav .right a span {
+    display: none;                    
+  }
+
+  .hero-section {
+    padding: 0 20px;                  
+  }
+
+  .hero-section .text h2 {
+    font-size: 30px;                  
+  }
+
+  .skills-section {
+    padding: 0 20px;                  
+  }
+
+  .skills-section .cells .cell span {
+    font-size: 16px;                  /* Teks skill */
+  }
+
+  .contact-section {
+    padding: 0 10px;                  
+  }
+}
